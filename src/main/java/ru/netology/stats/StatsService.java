@@ -43,8 +43,9 @@ public class StatsService {
     }
         public double getNumMothsBelowAverage(double[] sales) {
         int daysBelowAverage = 0;
+        double avgr = averageSales(sales);
         for (double sale : sales) {
-            if (sale < averageSales(sales)) {
+            if (sale < avgr) {
                 daysBelowAverage++;
                 // daysBelowAverage переменная для корличества месяцев ниже среднего
                 // sale - продажи в рассматриваемом месяце
@@ -55,8 +56,9 @@ public class StatsService {
 
     public double getNumMonthsAboveAverage(double[] sales) {
         int daysAboveAverage = 0;
+        double avgr = averageSales(sales);
         for (double sale : sales) {
-            if (sale < averageSales(sales)) {
+            if (sale > avgr) {
                 daysAboveAverage++;
                 // daysAboveAverage переменная для количества месяцев выше среднего
                 // sale - продажи в рассматриваемом месяце

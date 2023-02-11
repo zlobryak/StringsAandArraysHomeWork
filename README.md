@@ -1,0 +1,1 @@
+## This is a Home Work for Strings and arrays in QA.
